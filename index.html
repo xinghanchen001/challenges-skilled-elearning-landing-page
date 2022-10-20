@@ -33,8 +33,22 @@
           <p class="body__text__m" id="header__text">Our modern courses across a range of in-demand skills will give you the knowledge you need to live the life you want.</p>
           <div class="button pink__button"><a href="">Get Started</a></div>
         </div>
-        <img class="header__image" src="assets/image/image-hero-mobile.png" alt="">
-        <div class="header__image__pc"></div>
+        <!--<img class="header__image" src="assets/image/image-hero-mobile.png" alt="">
+            <div class="header__image__pc"></div>!-->
+        <picture class="header__image">
+
+        <source media="(min-width: 800px)"
+                srcset="assets/image/image-hero-desktop@2x.png">
+         
+
+         <source media="(min-width: 520px)" 
+                 srcset="assets/image/image-hero-tablet.png">
+         
+
+         <source srcset="assets/image/image-hero-mobile.png">
+         <img class="header__image__items" src="assets/image/image-hero-mobile.png" alt="">
+        </picture>
+        
     </div>
  <!--------------- SHOW BOX -------------------->
  <div class="showbox__container">
