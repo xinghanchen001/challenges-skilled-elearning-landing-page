@@ -128,7 +128,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 20px;
     position: absolute;
     z-index: 10;
 }
@@ -141,6 +141,7 @@ a{
 body{
     display: flex;
     justify-content: center;
+    min-width: 400px;
 }
 section{
     width: 100%;
@@ -148,12 +149,10 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #header__text{
     margin: 20px 0;
-
 }
 .text__block{
     position: relative;
@@ -162,12 +161,15 @@ section{
 .header__image{
     width: 300px;
     height: auto;
-    margin-top: 60px;
     position: relative;
 }
 .header__block{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     padding: 0 18px;
     width: 100%;
+    height: 900px;
+    
 }
 .header__image__items{
     margin-top: 100px;
@@ -181,6 +183,16 @@ section{
 }
 */
 @media only screen and (min-width:520px) and (max-width:800px) {
+    
+    .header__block{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        display: 100%;
+        padding: 0 0 0 18px;
+        height: 550px;
+    }
+    
     .text__block{
         position: relative;
         width: 50%;
@@ -188,14 +200,6 @@ section{
         top: 80px;
     }
 
-    .header__block{
-        display:flex;
-        flex-direction: row;
-        position: relative;
-        display: 100%;
-        padding: 0 0 0 18px;
-        height: 700px;
-    }
    
     .header__image{
         width: 50%;
@@ -203,11 +207,11 @@ section{
         padding-left: 100px;
     }
     .header__image__items{
-        width: 250%;
-        min-width: 600px;
+        width: 300%;
+        min-width: 450px;
         position: relative;
-        top: -200px;
-        right: 150px;
+        top: -150px;
+        right: 50px;
     }
     /*
     .header__image__pc{
@@ -222,16 +226,19 @@ section{
     */
 }
 @media only screen and (min-width:800px){
+    .nav{
+        padding: 44px;
+    }
     .text__block{
         position: relative;
-        width: 50%;
+        width: 100%;
         top: 200px;
         padding: 0 30px;
     }
 
     .header__block{
-        display:flex;
-        flex-direction: row;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
         position: relative;
         padding: 0 0 0 18px;
         height: 800px;
